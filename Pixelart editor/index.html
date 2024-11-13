@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pixel Art Editor</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
+        <h1>Pixel Art Editor</h1>
+        <div class="mpae-drawing-board">
+            <div class="mpae-buttons">
+                <button value="pen"         class="mpae-button mpae-tool-btn selected"></button=>
+                <button value="eraser"      class="mpae-button mpae-tool-btn"></button>
+                <button value="size1"       class="mpae-button mpae-size-btn selected"></button>
+                <button value="size2"       class="mpae-button mpae-size-btn"></button>
+                <button value="size3"       class="mpae-button mpae-size-btn"></button>
+                <button value="pickcolor"   class="mpae-button mpae-tool-btn"></button>
+                <button value="bucket"      class="mpae-button mpae-tool-btn"></button>
+                <button id="mpae-color-picker-btn" class="mpae-button"></button>
+                <input  type="color" value="#000000" id="mpae-color-picker"></input>
+                <button id="mpae-download-btn" class="mpae-button">
+                    <div class="mpae-dropdown-menu">
+                        <a id="mpae-download-link" download="pixelart">Original</a>
+                        <a id="mpae-download-scaled-link" download="pixelart_scaled">Scaled</a>
+                    </div>
+                </button>
+            </div>
+            <canvas id="mpae-pixelart-canvas"></canvas>
+            <img id="mpae-preview">
+        </div>
+
+        <script src="assets/js/JQuery.js"></script>
+        <script src="assets/js/pixelarteditor.js"></script>
+    </body>
+</html>

@@ -1,0 +1,184 @@
+:root {
+    --mpae-btn-size: 55px;
+}
+@font-face {
+    font-family: "nes";
+    src: url("../fonts/Pixel_NES.otf");
+}
+body {
+    background-color: black;
+    color: white;
+    font-family: "nes";
+    /* Flex Box */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+.mpae-drawing-board {
+    /* Flex Box */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    align-content: center;
+}
+
+#mpae-pixelart-canvas {
+    height: 80vh;
+    aspect-ratio: 1/1;
+    border: 4px solid #d07244;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    cursor: url("../img/pen_cursor.ico") 0 18, auto;
+}
+
+/* Buttons */
+.mpae-buttons {
+    height: 80vh;
+    /* Flex Box */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-content: center;
+}
+
+.mpae-button {
+    background: #f5e19c;
+    cursor: pointer;
+    border: none;
+    width: var(--mpae-btn-size);
+    aspect-ratio: 1/1;
+    image-rendering: pixelated;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/* --- Button backgrounds --- */
+/* Pen */
+.mpae-tool-btn[value=pen] {
+    background-image: url("../img/pen.png");
+}
+.mpae-tool-btn[value=pen]:hover,
+.mpae-tool-btn[value=pen].selected {
+    background-image: url("../img/pen_selected.png");
+}
+/* Eraser */
+.mpae-tool-btn[value=eraser] {
+    background-image: url("../img/eraser.png");
+}
+.mpae-tool-btn[value=eraser]:hover,
+.mpae-tool-btn[value=eraser].selected {
+    background-image: url("../img/eraser_selected.png");
+}
+/* Eraser */
+.mpae-tool-btn[value=eraser] {
+    background-image: url("../img/eraser.png");
+}
+.mpae-tool-btn[value=eraser]:hover,
+.mpae-tool-btn[value=eraser].selected {
+    background-image: url("../img/eraser_selected.png");
+}
+/* Size1 */
+.mpae-size-btn[value=size1] {
+    background-image: url("../img/size1.png");
+}
+.mpae-size-btn[value=size1]:hover,
+.mpae-size-btn[value=size1].selected {
+    background-image: url("../img/size1_selected.png");
+}
+/* Size2 */
+.mpae-size-btn[value=size2] {
+    background-image: url("../img/size2.png");
+}
+.mpae-size-btn[value=size2]:hover,
+.mpae-size-btn[value=size2].selected {
+    background-image: url("../img/size2_selected.png");
+}
+/* Size3 */
+.mpae-size-btn[value=size3] {
+    background-image: url("../img/size3.png");
+}
+.mpae-size-btn[value=size3]:hover,
+.mpae-size-btn[value=size3].selected {
+    background-image: url("../img/size3_selected.png");
+}
+/* Pick color */
+.mpae-tool-btn[value=pickcolor] {
+    background-image: url("../img/pickcolor.png");
+}
+.mpae-tool-btn[value=pickcolor]:hover,
+.mpae-tool-btn[value=pickcolor].selected {
+    background-image: url("../img/pickcolor_selected.png");
+}
+/* Bucket */
+.mpae-tool-btn[value=bucket] {
+    background-image: url("../img/bucket.png");
+}
+.mpae-tool-btn[value=bucket]:hover,
+.mpae-tool-btn[value=bucket].selected {
+    background-image: url("../img/bucket_selected.png");
+}
+
+/* Color picker */
+#mpae-color-picker {
+    display: none;
+}
+#mpae-color-picker-btn {
+    background-image: url("../img/colorpicker.png");
+}
+#mpae-color-picker-btn:hover {
+    background-image: url("../img/colorpicker_selected.png");
+}
+
+/* Download btn */
+#mpae-download-btn {
+    background-image: url("../img/download.png");
+    position: relative;
+}
+#mpae-download-btn:hover {
+    background-image: url("../img/download_selected.png");
+}
+.mpae-dropdown-menu {
+    background: #f5e19c;
+    height: var(--mpae-btn-size);
+    position: absolute;
+    top: 0;
+    left: var(--mpae-btn-size);
+    width: 0px;
+    transition: width 200ms ease;
+    overflow: hidden;
+}
+#mpae-download-btn:hover .mpae-dropdown-menu {
+    width: 100px;
+}
+#mpae-download-link, #mpae-download-scaled-link {
+    display: block;
+    width: 100%;
+    border: 4px solid #d07244;
+    box-sizing: border-box;
+    padding: 0.2rem;
+    /* Text */
+    color: #d07244;
+    text-decoration: none;
+    font-family: "nes";
+}
+#mpae-download-scaled-link {
+    border-top: none;
+}
+#mpae-download-link:hover, #mpae-download-scaled-link:hover {
+    background-color: #d07244;
+    color: #f5e19c;
+}
+
+#mpae-preview {
+    width: 200px;
+    border: 4px solid #fefff8;
+    box-sizing: border-box;
+}
+
+img {
+    image-rendering: pixelated;
+}
